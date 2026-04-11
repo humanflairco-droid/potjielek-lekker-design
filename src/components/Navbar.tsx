@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import potLogo from "@/assets/potlogo.jpeg";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
