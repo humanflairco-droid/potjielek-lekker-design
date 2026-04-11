@@ -46,8 +46,11 @@ const About = () => (
           <p className="font-body text-foreground/80 leading-relaxed mb-6">
             Potjielek-Lekker was born from a love of gathering. We saw how the simple act of cooking over fire could bring families closer — and we wanted to make that experience accessible to everyone.
           </p>
-          <p className="font-body text-foreground/80 leading-relaxed">
+          <p className="font-body text-foreground/80 leading-relaxed mb-6">
             Our custom-designed stands and premium pots bridge tradition and modern convenience, giving you the tools to create memories that last a lifetime.
+          </p>
+          <p className="font-body text-foreground/80 leading-relaxed italic">
+            Every pot is proudly handcrafted in Albertinia, a small town in the heart of the Western Cape — where quality and tradition go hand in hand.
           </p>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = "27123456789";
+const WHATSAPP_NUMBER = "27824150386";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -26,6 +26,18 @@ const Contact = () => {
           <p className="font-body text-foreground/70 text-lg">
             Questions, custom orders, or just want to say hello? We'd love to hear from you.
           </p>
+        </div>
+
+        {/* Contact details */}
+        <div className="container mx-auto max-w-xl text-center mb-10 space-y-3">
+          <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
+            <Phone className="w-5 h-5 text-primary" />
+            <a href="tel:+27824150386" className="hover:text-primary transition-colors">082 415 0386</a>
+          </div>
+          <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
+            <Mail className="w-5 h-5 text-primary" />
+            <a href="mailto:potjielek@gmail.com" className="hover:text-primary transition-colors">potjielek@gmail.com</a>
+          </div>
         </div>
 
         {/* Large WhatsApp CTA */}
