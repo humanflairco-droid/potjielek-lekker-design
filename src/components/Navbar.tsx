@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-iron border-b border-primary/20">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/" className="flex items-center">
-          <img src={potLogo} alt="Potjielek-Lekker" className="h-[40px] md:h-[50px] w-auto object-contain pl-4" />
+          <img src={potLogo} alt="Potjielek-Lekker" className="h-[45px] w-auto object-contain pl-5" />
         </Link>
 
         {/* Desktop nav — journal tabs */}
