@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import potLogo from "@/assets/potlogo.jpeg";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
@@ -17,8 +18,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-iron border-b border-primary/20">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/" className="font-heading text-2xl font-bold text-primary tracking-wide">
-          Potjielek-Lekker
+        <Link to="/" className="flex items-center">
+          <img src={potLogo} alt="Potjielek-Lekker" className="h-[60px] md:h-[80px] w-auto object-contain" />
         </Link>
 
         {/* Desktop nav — journal tabs */}
