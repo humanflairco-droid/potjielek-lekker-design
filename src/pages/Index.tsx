@@ -23,7 +23,7 @@ const SVGSteamWisps = () => (
     {/* Steam wisp 1 - left of center */}
     <path
       className="steam-svg-1"
-      d="M380,520 Q370,480 385,440 Q400,400 375,360 Q350,320 370,280 Q390,240 380,200"
+      d="M380,350 Q370,310 385,270 Q400,230 375,190 Q350,150 370,110 Q390,70 380,30"
       fill="none"
       stroke="url(#steamGrad)"
       strokeWidth="12"
@@ -33,7 +33,7 @@ const SVGSteamWisps = () => (
     {/* Steam wisp 2 - center */}
     <path
       className="steam-svg-2"
-      d="M400,530 Q420,490 395,450 Q370,410 400,370 Q430,330 410,290 Q390,250 400,210"
+      d="M400,360 Q420,320 395,280 Q370,240 400,200 Q430,160 410,120 Q390,80 400,40"
       fill="none"
       stroke="url(#steamGrad)"
       strokeWidth="16"
@@ -43,7 +43,7 @@ const SVGSteamWisps = () => (
     {/* Steam wisp 3 - right of center */}
     <path
       className="steam-svg-3"
-      d="M420,525 Q440,485 425,445 Q410,405 435,365 Q460,325 440,285 Q420,245 430,205"
+      d="M420,355 Q440,315 425,275 Q410,235 435,195 Q460,155 440,115 Q420,75 430,35"
       fill="none"
       stroke="url(#steamGrad)"
       strokeWidth="10"
@@ -104,8 +104,8 @@ const Home = () => {
 
         wordEls.forEach((word) => {
           wordTl
-            .fromTo(word, { opacity: 0, y: 40 }, { opacity: 0.8, y: 0, duration: 1.2, ease: "power2.out" })
-            .to(word, { opacity: 0, y: -50, duration: 1.4, ease: "power1.in" }, "+=0.6");
+            .fromTo(word, { opacity: 0, y: 30 }, { opacity: 0.6, y: 0, duration: 1.2, ease: "power2.out" })
+            .to(word, { opacity: 0, y: -40, duration: 1.4, ease: "power1.in" }, "+=0.6");
         });
       }
     }, heroRef);
@@ -135,12 +135,12 @@ const Home = () => {
         <SVGSteamWisps />
 
         {/* Rising words */}
-        <div ref={wordsRef} className="absolute inset-0 flex items-end justify-center pb-[18%] pointer-events-none">
+        <div ref={wordsRef} className="absolute bottom-[8%] left-0 right-0 flex justify-center pointer-events-none">
           {RISING_WORDS.map((word) => (
             <span
               key={word}
-              className="rising-word absolute font-heading text-2xl md:text-4xl tracking-widest uppercase opacity-0"
-              style={{ color: "hsl(43,52%,54%)" }}
+              className="rising-word absolute font-heading tracking-widest uppercase opacity-0"
+              style={{ color: "hsl(43,52%,54%)", fontSize: "1.2rem" }}
             >
               {word}
             </span>
@@ -166,7 +166,7 @@ const Home = () => {
         </div>
       </section>
 
-      <SectionDivider text="Welcome" />
+      <SectionDivider />
 
       {/* Welcome section */}
       <section className="py-16 px-6">
