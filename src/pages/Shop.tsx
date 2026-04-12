@@ -1,6 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import productImage from "@/assets/potjie-product.jpg";
+import heroProductImage from "@/assets/potjielek-shop-card.png";
 import { Check } from "lucide-react";
 
 const WHATSAPP_NUMBER = "27824150386";
@@ -53,15 +54,16 @@ const Shop = () => {
         <div className="container mx-auto max-w-4xl mb-20">
           <div className="bg-card border-2 border-primary/30 rounded overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="overflow-hidden h-72 md:h-auto">
+              <div className="overflow-hidden h-72 md:h-auto relative">
                 <img
-                  src={productImage}
+                  src={heroProductImage}
                   alt="The Potjielek-Lekker Set"
                   className="w-full h-full object-cover"
                   loading="lazy"
                   width={800}
                   height={800}
                 />
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
               </div>
               <div className="p-8 md:p-10 flex flex-col justify-center">
                 <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
