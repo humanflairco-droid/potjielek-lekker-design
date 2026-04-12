@@ -54,11 +54,11 @@ const Shop = () => {
         <div className="container mx-auto max-w-4xl mb-20">
           <div className="bg-card border-2 border-primary/30 rounded overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="overflow-hidden h-72 md:h-auto relative">
+              <div className="overflow-hidden h-72 md:h-auto relative" style={{ backgroundColor: '#5C3317' }}>
                 <img
                   src={heroProductImage}
                   alt="The Potjielek-Lekker Set"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                   width={800}
                   height={800}
