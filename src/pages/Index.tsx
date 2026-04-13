@@ -145,7 +145,7 @@ const Home = () => {
 
   return (
     <PageWrapper>
-      {/* Hero */}
+      <div ref={pageRef}>
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background video with image fallback */}
         <div className="absolute inset-0">
@@ -209,7 +209,7 @@ const Home = () => {
       <SectionDivider />
 
       {/* Welcome section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 scroll-reveal">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl text-primary mb-8">
             Welcome to Potjielek-Lekker
@@ -223,7 +223,7 @@ const Home = () => {
       <SectionDivider />
 
       {/* Featured product */}
-      <section className="py-16 px-6 bg-iron/30">
+      <section className="py-16 px-6 bg-iron/30 scroll-reveal">
         <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded">
             <img src={productImage} alt="Cast iron potjie pot on custom stand" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={800} />
@@ -243,7 +243,7 @@ const Home = () => {
       <SectionDivider />
 
       {/* Family image section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 scroll-reveal">
         <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
             <h2 className="font-heading text-3xl text-primary mb-6">Built for Family</h2>
@@ -259,6 +259,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      </div>
     </PageWrapper>
   );
 };
