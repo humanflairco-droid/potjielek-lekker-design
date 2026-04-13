@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import heroImage from "@/assets/hero-potjie.jpg";
@@ -62,6 +65,7 @@ const Home = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const emberRef = useRef<HTMLDivElement>(null);
   const wordsRef = useRef<HTMLDivElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -110,7 +114,7 @@ const Home = () => {
       }
     }, heroRef);
 
-    return () => ctx.revert();
+    return () => { ctx.revert(); };
   }, []);
 
   return (
