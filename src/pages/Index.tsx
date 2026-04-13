@@ -117,11 +117,21 @@ const Home = () => {
     <PageWrapper>
       {/* Hero */}
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background image with overlay */}
+        {/* Background video with image fallback */}
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Potjie pot over fire" className="w-full h-full object-cover" width={1920} height={1080} />
-          <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/40" />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={heroImage}
+            className="w-full h-full object-cover"
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+          <img src={heroImage} alt="Potjie pot over fire" className="w-full h-full object-cover absolute inset-0 md:hidden" style={{ display: 'none' }} />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
 
         {/* Ember glow - GSAP animated */}
