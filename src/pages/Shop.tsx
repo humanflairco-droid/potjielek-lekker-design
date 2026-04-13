@@ -3,6 +3,7 @@ import SectionDivider from "@/components/SectionDivider";
 import productImage from "@/assets/potjie-product.jpg";
 import heroProductImage from "@/assets/potjielek-shop-card.png";
 import { Check } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const WHATSAPP_NUMBER = "27824150386";
 
@@ -40,100 +41,104 @@ const handleWhatsApp = (productName: string) => {
 };
 
 const Shop = () => {
+  const scrollRef = useScrollReveal();
+
   return (
     <PageWrapper>
-      <section className="py-20 px-6">
-        <div className="container mx-auto max-w-3xl text-center mb-16">
-          <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4">Our Collection</h1>
-          <p className="font-body text-foreground/70 text-lg">
-            Handcrafted cast iron. Built to last generations.
-          </p>
-        </div>
+      <div ref={scrollRef}>
+        <section className="py-20 px-6">
+          <div className="container mx-auto max-w-3xl text-center mb-16 scroll-reveal">
+            <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4">Our Collection</h1>
+            <p className="font-body text-foreground/70 text-lg">
+              Handcrafted cast iron. Built to last generations.
+            </p>
+          </div>
 
-        {/* Hero product — The Potjielek-Lekker Set */}
-        <div className="container mx-auto max-w-4xl mb-20">
-          <div className="bg-card border-2 border-primary/30 rounded overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="overflow-hidden h-72 md:h-auto relative">
-                <img
-                  src={heroProductImage}
-                  alt="The Potjielek-Lekker Set"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                />
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
-              </div>
-              <div className="p-8 md:p-10 flex flex-col justify-center">
-                <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
-                  The Potjielek-Lekker Set
-                </h2>
-                <p className="font-body text-foreground/60 italic mb-6">
-                  Everything you need. Nothing you don't.
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {setContents.map((item) => (
-                    <li key={item} className="flex items-center gap-3 font-body text-foreground/80 text-sm">
-                      <Check className="w-4 h-4 text-primary flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <button
-                  onClick={() => handleWhatsApp("The Potjielek-Lekker Set")}
-                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
-                >
-                  <WhatsAppIcon />
-                  WhatsApp Us to Order
-                </button>
+          {/* Hero product — The Potjielek-Lekker Set */}
+          <div className="container mx-auto max-w-4xl mb-20 scroll-reveal">
+            <div className="bg-card border-2 border-primary/30 rounded overflow-hidden transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] hover:scale-[1.02]">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="overflow-hidden h-72 md:h-auto relative">
+                  <img
+                    src={heroProductImage}
+                    alt="The Potjielek-Lekker Set"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={800}
+                    height={800}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
+                </div>
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
+                    The Potjielek-Lekker Set
+                  </h2>
+                  <p className="font-body text-foreground/60 italic mb-6">
+                    Everything you need. Nothing you don't.
+                  </p>
+                  <ul className="space-y-3 mb-8">
+                    {setContents.map((item) => (
+                      <li key={item} className="flex items-center gap-3 font-body text-foreground/80 text-sm">
+                        <Check className="w-4 h-4 text-primary flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    onClick={() => handleWhatsApp("The Potjielek-Lekker Set")}
+                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
+                  >
+                    <WhatsAppIcon />
+                    WhatsApp Us to Order
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <SectionDivider text="Individual Items" />
+          <SectionDivider text="Individual Items" />
 
-        {/* Individual item cards */}
-        <div className="container mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {individualItems.map((item) => (
-            <div
-              key={item.name}
-              className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col transition-all duration-300 hover:border-primary/60 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.1)]"
-            >
-              <div className="overflow-hidden h-52">
-                <img
-                  src={productImage}
-                  alt={item.name}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                />
+          {/* Individual item cards */}
+          <div className="container mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 scroll-reveal">
+            {individualItems.map((item) => (
+              <div
+                key={item.name}
+                className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] hover:scale-[1.03]"
+              >
+                <div className="overflow-hidden h-52">
+                  <img
+                    src={productImage}
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width={800}
+                    height={800}
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-heading text-xl text-primary mb-2">{item.name}</h3>
+                  <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed">
+                    {item.desc}
+                  </p>
+                  <button
+                    onClick={() => handleWhatsApp(item.name)}
+                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
+                  >
+                    <WhatsAppIcon />
+                    WhatsApp Us to Order
+                  </button>
+                </div>
               </div>
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-heading text-xl text-primary mb-2">{item.name}</h3>
-                <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed">
-                  {item.desc}
-                </p>
-                <button
-                  onClick={() => handleWhatsApp(item.name)}
-                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
-                >
-                  <WhatsAppIcon />
-                  WhatsApp Us to Order
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="container mx-auto max-w-3xl text-center mt-16">
-          <p className="font-body text-foreground/50 text-sm italic">
-            Contact us for bulk orders or custom requests.
-          </p>
-        </div>
-      </section>
+          <div className="container mx-auto max-w-3xl text-center mt-16 scroll-reveal">
+            <p className="font-body text-foreground/50 text-sm italic">
+              Contact us for bulk orders or custom requests.
+            </p>
+          </div>
+        </section>
+      </div>
     </PageWrapper>
   );
 };
