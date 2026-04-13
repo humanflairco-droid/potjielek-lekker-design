@@ -1,6 +1,28 @@
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 const WHATSAPP_NUMBER = "27123456789";
 
 const WhatsAppFloat = () => {
+  const btnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!btnRef.current) return;
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 3 });
+    tl.to(btnRef.current, {
+      scale: 1.15,
+      boxShadow: "0 0 30px hsla(43,52%,54%,0.6)",
+      duration: 0.4,
+      ease: "power2.out",
+    }).to(btnRef.current, {
+      scale: 1,
+      boxShadow: "0 4px 20px hsla(43,52%,54%,0.4)",
+      duration: 0.4,
+      ease: "power2.in",
+    });
+    return () => { tl.kill(); };
+  }, []);
+
   const openWhatsApp = () => {
     const message = encodeURIComponent("Hi! I'm interested in Potjielek-Lekker products.");
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
@@ -8,6 +30,7 @@ const WhatsAppFloat = () => {
 
   return (
     <button
+      ref={btnRef}
       onClick={openWhatsApp}
       aria-label="Chat on WhatsApp"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-primary text-primary-foreground rounded-full flex items-center justify-center shadow-[0_4px_20px_hsl(43,52%,54%,0.4)] hover:scale-110 hover:shadow-[0_4px_30px_hsl(43,52%,54%,0.6)] transition-all duration-300"
