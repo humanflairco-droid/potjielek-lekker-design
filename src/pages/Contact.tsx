@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent("Hi! I'd like to get in touch with Potjielek-Lekker.");
+    const message = encodeURIComponent("Hi, I would like to order from Potjielek-Lekker.");
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 

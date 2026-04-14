@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const WHATSAPP_NUMBER = "27123456789";
+const WHATSAPP_NUMBER = "27824150386";
 
 const WhatsAppFloat = () => {
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -24,7 +24,7 @@ const WhatsAppFloat = () => {
   }, []);
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent("Hi! I'm interested in Potjielek-Lekker products.");
+    const message = encodeURIComponent("Hi, I would like to order from Potjielek-Lekker.");
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 

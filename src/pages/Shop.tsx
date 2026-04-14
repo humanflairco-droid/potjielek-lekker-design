@@ -36,7 +36,7 @@ const WhatsAppIcon = () => (
 );
 
 const handleWhatsApp = (productName: string) => {
-  const message = encodeURIComponent(`Hi! I'd like to order: ${productName}`);
+  const message = encodeURIComponent("Hi, I would like to order from Potjielek-Lekker.");
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
 };
 
