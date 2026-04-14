@@ -120,8 +120,6 @@ const Shop = () => {
                     height={800}
                   />
                 </div>
-                  />
-                </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-heading text-xl text-primary mb-2">{item.name}</h3>
                   <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed">
