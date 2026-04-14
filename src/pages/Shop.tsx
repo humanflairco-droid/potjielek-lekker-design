@@ -2,6 +2,8 @@ import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import productImage from "@/assets/potjie-product.jpg";
 import heroProductImage from "@/assets/potjielek-shop-card.png";
+import shopPotOnly from "@/assets/shop-pot-only.jpg";
+import shopGelCup from "@/assets/shop-gel-cup.jpg";
 import { Check } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -18,14 +20,17 @@ const individualItems = [
   {
     name: "Potjie Pot Only",
     desc: "Our signature mini cast iron pot — hand-selected for quality, built to last generations.",
+    image: shopPotOnly,
   },
   {
     name: "Stand Only",
     desc: "Custom-designed steel stand. Hand-welded for stability and style — pairs perfectly with our pots.",
+    image: productImage,
   },
   {
     name: "Gel Cup Only",
     desc: "Clean-burning gel fuel cup for safe, smokeless cooking indoors or outdoors.",
+    image: shopGelCup,
   },
 ];
 
@@ -107,12 +112,14 @@ const Shop = () => {
               >
                 <div className="overflow-hidden h-52">
                   <img
-                    src={productImage}
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width={800}
                     height={800}
+                  />
+                </div>
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
