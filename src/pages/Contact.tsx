@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const WHATSAPP_NUMBER = "27824150386";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const scrollRef = useScrollReveal();
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    const email = formData.get("email") as string;
+    const message = formData.get("message") as string;
+
+    setSending(true);
+    try {
+      const mailtoLink = `mailto:potjielek@gmail.com?subject=${encodeURIComponent("Website Contact Form")}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
+      window.location.href = mailtoLink;
+      setSubmitted(true);
+    } catch {
+      setSubmitted(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   const openWhatsApp = () => {
-    const message = encodeURIComponent("Hi! I'd like to get in touch with Potjielek-Lekker.");
+    const message = encodeURIComponent("Hi, I would like to order from Potjielek-Lekker.");
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 
@@ -39,6 +55,10 @@ const Contact = () => {
             <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
               <Mail className="w-5 h-5 text-primary" />
               <a href="mailto:potjielek@gmail.com" className="hover:text-primary transition-colors">potjielek@gmail.com</a>
+            </div>
+            <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
+              <MapPin className="w-5 h-5 text-primary" />
+              <span>Albertinia, Western Cape, South Africa</span>
             </div>
           </div>
 
@@ -63,13 +83,14 @@ const Contact = () => {
                 <p className="font-body text-foreground/70">We'll get back to you soon.</p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="font-heading text-xs text-primary uppercase tracking-widest block mb-2">Email</label>
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-primary/50" />
                     <input
                       type="email"
+                      name="email"
                       required
                       className="w-full bg-card border border-primary/20 rounded pl-11 pr-4 py-3 font-body text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary transition-colors"
                       placeholder="your@email.com"
@@ -79,6 +100,7 @@ const Contact = () => {
                 <div>
                   <label className="font-heading text-xs text-primary uppercase tracking-widest block mb-2">Message</label>
                   <textarea
+                    name="message"
                     required
                     rows={5}
                     className="w-full bg-card border border-primary/20 rounded px-4 py-3 font-body text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary transition-colors resize-none"
@@ -87,12 +109,30 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)]"
+                  disabled={sending}
+                  className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] disabled:opacity-50"
                 >
-                  Send Message
+                  {sending ? "Opening Email..." : "Send Message"}
                 </button>
               </form>
             )}
+          </div>
+
+          <SectionDivider text="Find Us" />
+
+          <div className="container mx-auto max-w-3xl mt-8 scroll-reveal">
+            <div className="rounded overflow-hidden border border-primary/20">
+              <iframe
+                title="Potjielek-Lekker Location — Albertinia, Western Cape"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26544.16!2d21.57!3d-34.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dd5e1b6f9b1b3e7%3A0x2b2a1c5e8f3a4b6c!2sAlbertinia%2C%20Western%20Cape%2C%20South%20Africa!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </section>
       </div>
