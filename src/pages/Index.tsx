@@ -149,7 +149,7 @@ const Home = () => {
   return (
     <PageWrapper>
       <div ref={pageRef}>
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen md:min-h-screen h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
         {/* Background video with image fallback */}
         <div className="absolute inset-0">
           <video
@@ -163,7 +163,7 @@ const Home = () => {
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
           <img src={heroImage} alt="Potjie pot over fire" className="w-full h-full object-cover absolute inset-0 md:hidden" style={{ display: 'none' }} />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
 
