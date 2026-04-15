@@ -40,8 +40,15 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
+const productMessages: Record<string, string> = {
+  "The Potjielek-Lekker Set": "Hi Potjielek-Lekker! I'd like to order the Full Set. Please send me pricing and availability. Thank you!",
+  "Potjie Pot Only": "Hi Potjielek-Lekker! I'd like to order a Potjie Pot. Please send me pricing and availability. Thank you!",
+  "Stand Only": "Hi Potjielek-Lekker! I'd like to order a Stand. Please send me pricing and availability. Thank you!",
+  "Gel Cup Only": "Hi Potjielek-Lekker! I'd like to order a Gel Cup. Please send me pricing and availability. Thank you!",
+};
+
 const handleWhatsApp = (productName: string) => {
-  const message = encodeURIComponent("Hi, I would like to order from Potjielek-Lekker.");
+  const message = encodeURIComponent(productMessages[productName] || "Hi, I would like to order from Potjielek-Lekker.");
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
 };
 
