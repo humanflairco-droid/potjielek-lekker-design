@@ -6,9 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import heroImage from "@/assets/hero-potjie.jpg";
-import productImage from "@/assets/potjie-product.jpg";
+import heroImage from "@/assets/product-fireplace-stand.jpg";
+import productImage from "@/assets/product-box-stand.jpg";
 import familyImage from "@/assets/family-gathering.jpg";
+import lifestyleBraai from "@/assets/lifestyle-braai-table.jpg";
+import hero01 from "@/assets/hero-01.jpg";
+import hero02 from "@/assets/hero-02.jpg";
 
 const SVGSteamWisps = () => (
   <svg
