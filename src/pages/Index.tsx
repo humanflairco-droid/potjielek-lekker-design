@@ -262,6 +262,35 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <SectionDivider />
+
+      {/* Social proof gallery */}
+      <section className="py-16 px-6 scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="font-heading text-3xl md:text-4xl text-center mb-12" style={{ color: '#C9A84C' }}>
+            Real Potjies. Real People. Real Moments.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: lifestyleBraai, alt: "Potjie set on a braai table by the fireplace" },
+              { src: hero01, alt: "Family gathered around potjie dinner" },
+              { src: hero02, alt: "Friends enjoying a potjie evening together" },
+            ].map((img) => (
+              <div key={img.alt} className="overflow-hidden rounded aspect-[4/3]">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       </div>
     </PageWrapper>
   );
