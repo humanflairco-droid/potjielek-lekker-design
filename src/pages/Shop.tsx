@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import productImage from "@/assets/potjie-product.jpg";
+import productImage from "@/assets/product-stand-detail.jpg";
 import heroProductImage from "@/assets/potjielek-shop-card.png";
 import shopPotOnly from "@/assets/shop-pot-only.jpg";
 import shopGelCup from "@/assets/shop-gel-cup.jpg";

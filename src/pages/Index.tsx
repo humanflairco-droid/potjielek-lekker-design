@@ -6,9 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import heroImage from "@/assets/hero-potjie.jpg";
-import productImage from "@/assets/potjie-product.jpg";
+import heroImage from "@/assets/product-fireplace-stand.jpg";
+import productImage from "@/assets/product-box-stand.jpg";
 import familyImage from "@/assets/family-gathering.jpg";
+import lifestyleBraai from "@/assets/lifestyle-braai-table.jpg";
+import hero01 from "@/assets/hero-01.jpg";
+import hero02 from "@/assets/hero-02.jpg";
 
 const SVGSteamWisps = () => (
   <svg
@@ -146,7 +149,7 @@ const Home = () => {
   return (
     <PageWrapper>
       <div ref={pageRef}>
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-screen md:min-h-screen h-[60vh] md:h-screen flex items-center justify-center overflow-hidden">
         {/* Background video with image fallback */}
         <div className="absolute inset-0">
           <video
@@ -160,7 +163,7 @@ const Home = () => {
             <source src="/hero-video.mp4" type="video/mp4" />
           </video>
           <img src={heroImage} alt="Potjie pot over fire" className="w-full h-full object-cover absolute inset-0 md:hidden" style={{ display: 'none' }} />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
         </div>
 
@@ -256,6 +259,35 @@ const Home = () => {
           </div>
           <div className="order-1 md:order-2 overflow-hidden rounded">
             <img src={familyImage} alt="Family gathered around a potjie" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={1200} height={800} />
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* Social proof gallery */}
+      <section className="py-16 px-6 scroll-reveal">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="font-heading text-3xl md:text-4xl text-center mb-12" style={{ color: '#C9A84C' }}>
+            Real Potjies. Real People. Real Moments.
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: lifestyleBraai, alt: "Potjie set on a braai table by the fireplace" },
+              { src: hero01, alt: "Family gathered around potjie dinner" },
+              { src: hero02, alt: "Friends enjoying a potjie evening together" },
+            ].map((img) => (
+              <div key={img.alt} className="overflow-hidden rounded aspect-[4/3]">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
