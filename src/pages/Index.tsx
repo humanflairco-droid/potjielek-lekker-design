@@ -8,7 +8,7 @@ import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import heroImage from "@/assets/product-fireplace-stand.jpg";
 import productImage from "@/assets/product-box-stand.jpg";
-import familyImage from "@/assets/family-gathering.jpg";
+import familyImage from "@/assets/product-table-setup.jpg";
 import lifestyleBraai from "@/assets/lifestyle-braai-table.jpg";
 import hero01 from "@/assets/hero-01.jpg";
 import hero02 from "@/assets/hero-02.jpg";
