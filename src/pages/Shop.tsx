@@ -18,14 +18,16 @@ const setContents = [
 
 const individualItems = [
   {
-    name: "Potjie Pot Only",
+    name: "Potjie Stand with Pot",
     desc: "Our signature mini cast iron pot — hand-selected for quality, built to last generations.",
     image: shopPotOnly,
+    price: "R550",
   },
   {
     name: "Stand Only",
     desc: "Custom-designed steel stand. Hand-welded for stability and style — pairs perfectly with our pots.",
     image: productImage,
+    price: "R300",
   },
   {
     name: "Gel Cup Only",
@@ -42,7 +44,7 @@ const WhatsAppIcon = () => (
 
 const productMessages: Record<string, string> = {
   "The Potjielek-Lekker Set": "Hi Potjielek-Lekker! I'd like to order the Full Set. Please send me pricing and availability. Thank you!",
-  "Potjie Pot Only": "Hi Potjielek-Lekker! I'd like to order a Potjie Pot. Please send me pricing and availability. Thank you!",
+  "Potjie Stand with Pot": "Hi Potjielek-Lekker! I'd like to order a Potjie Stand with Pot. Please send me pricing and availability. Thank you!",
   "Stand Only": "Hi Potjielek-Lekker! I'd like to order a Stand. Please send me pricing and availability. Thank you!",
   "Gel Cup Only": "Hi Potjielek-Lekker! I'd like to order a Gel Cup. Please send me pricing and availability. Thank you!",
 };
@@ -129,9 +131,12 @@ const Shop = () => {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-heading text-xl text-primary mb-2">{item.name}</h3>
-                  <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed">
+                  <p className="font-body text-foreground/60 text-sm mb-4 flex-1 leading-relaxed">
                     {item.desc}
                   </p>
+                  {item.price && (
+                    <p className="font-heading text-2xl text-[#C9A84C] mb-4">{item.price}</p>
+                  )}
                   <button
                     onClick={() => handleWhatsApp(item.name)}
                     className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
@@ -144,9 +149,21 @@ const Shop = () => {
             ))}
           </div>
 
-          <div className="container mx-auto max-w-3xl text-center mt-16 scroll-reveal">
-            <p className="font-body text-foreground/50 text-sm italic">
-              Contact us for bulk orders or custom requests.
+          <div className="container mx-auto max-w-3xl text-center mt-16 scroll-reveal space-y-2">
+            <p className="font-body text-[#F5EFE6] text-sm italic">
+              Nationwide delivery available via Pudo/courier at additional cost.
+            </p>
+            <p className="font-body text-[#F5EFE6] text-sm italic">
+              Custom orders welcome —{" "}
+              <a
+                href="https://wa.me/27824150386?text=Hi%20Potjielek-Lekker!%20I%27d%20like%20to%20enquire%20about%20a%20custom%20order."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-[#C9A84C] transition-colors"
+              >
+                WhatsApp us
+              </a>{" "}
+              to discuss.
             </p>
           </div>
         </section>
