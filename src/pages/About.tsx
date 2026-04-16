@@ -1,6 +1,6 @@
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import familyImage from "@/assets/family-gathering.jpg";
+import familyImage from "@/assets/product-hero-fireplace.jpg";
 import { Heart, Users, Flame } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
