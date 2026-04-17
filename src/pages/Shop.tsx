@@ -110,6 +110,27 @@ const Shop = () => {
             </div>
           </div>
 
+          {/* Video section */}
+          <section className="bg-[#1C1C1C] py-16 px-6 -mx-6 mb-12 scroll-reveal">
+            <div className="container mx-auto max-w-3xl text-center">
+              <h2 className="font-heading text-3xl md:text-4xl text-[#C9A84C] mb-3">
+                See How It Works
+              </h2>
+              <p className="font-body text-[#F5EFE6] text-lg mb-8 italic">
+                Set up in seconds — anywhere, anytime.
+              </p>
+              <video
+                src="https://res.cloudinary.com/dhrlznh1a/video/upload/v1776367719/flying_potjie_video_mpftzi.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full max-w-[800px] mx-auto border-2 border-[#C9A84C]"
+                style={{ borderRadius: "12px" }}
+              />
+            </div>
+          </section>
+
           <SectionDivider text="Individual Items" />
 
           {/* Individual item cards */}
