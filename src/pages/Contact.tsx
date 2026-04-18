@@ -21,7 +21,7 @@ const Contact = () => {
 
     setSending(true);
     try {
-      const mailtoLink = `mailto:potjielek@gmail.com?subject=${encodeURIComponent("Website Contact Form")}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
+      const mailtoLink = `mailto:sales.potjielek@gmail.com?subject=${encodeURIComponent("Website Contact Form")}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`;
       window.location.href = mailtoLink;
       setSubmitted(true);
     } catch {
@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
               <Mail className="w-5 h-5 text-primary" />
-              <a href="mailto:potjielek@gmail.com" className="hover:text-primary transition-colors">potjielek@gmail.com</a>
+              <a href="mailto:sales.potjielek@gmail.com" className="hover:text-primary transition-colors">sales.potjielek@gmail.com</a>
             </div>
             <div className="flex items-center justify-center gap-3 font-body text-foreground/80">
               <MapPin className="w-5 h-5 text-primary" />
