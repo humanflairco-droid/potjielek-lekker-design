@@ -1,6 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
-import familyImage from "@/assets/product-hero-fireplace.jpg";
 import { Heart, Users, Flame } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -37,15 +36,13 @@ const About = () => {
           </div>
 
           <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 scroll-reveal">
-            <div className="overflow-hidden rounded">
-              <img
-                src={familyImage}
-                alt="Family around the potjie"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-                width={1200}
-                height={800}
-              />
+            <div className="overflow-hidden rounded" style={{ backgroundColor: "#5C3317" }}>
+              <div
+                className="w-full h-full flex items-center justify-center"
+                style={{ minHeight: "400px" }}
+              >
+                <span style={{ color: "#C9A84C" }} className="font-heading text-2xl">Image Coming Soon</span>
+              </div>
             </div>
             <div>
               <p className="font-body text-foreground/80 leading-relaxed mb-6">
