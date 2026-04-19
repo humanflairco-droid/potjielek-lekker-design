@@ -14,21 +14,41 @@ export const useScrollReveal = () => {
 
     const ctx = gsap.context(() => {
       sections.forEach((section) => {
-        gsap.fromTo(
-          section,
-          { opacity: 0, y: 30 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: section,
-              start: "top 85%",
-              once: true,
-            },
-          }
-        );
+        const children = section.querySelectorAll(".reveal-child");
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 28 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              ease: "power2.out",
+              stagger: 0.13,
+              scrollTrigger: {
+                trigger: section,
+                start: "top 88%",
+                once: true,
+              },
+            }
+          );
+        } else {
+          gsap.fromTo(
+            section,
+            { opacity: 0, y: 34 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: section,
+                start: "top 88%",
+                once: true,
+              },
+            }
+          );
+        }
       });
     }, containerRef);
 

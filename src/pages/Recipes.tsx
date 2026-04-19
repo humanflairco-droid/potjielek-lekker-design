@@ -280,7 +280,7 @@ const Recipes = () => {
             <div className="container mx-auto max-w-4xl">
               <button
                 onClick={() => setSelectedRecipe(null)}
-                className="font-heading text-sm text-primary uppercase tracking-widest mb-8 inline-flex items-center gap-2 hover:opacity-70 transition-opacity"
+                className="font-heading text-sm text-primary uppercase tracking-widest mb-8 inline-flex items-center gap-2 hover:opacity-70 transition-opacity btn-gold-glow"
               >
                 ← Back to Recipes
               </button>
@@ -342,8 +342,8 @@ const Recipes = () => {
       <div ref={scrollRef}>
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-3xl text-center mb-16 scroll-reveal">
-            <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4">Recipes</h1>
-            <p className="font-body text-foreground/70 text-lg">
+            <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4 reveal-child">Recipes</h1>
+            <p className="font-body text-foreground/70 text-lg reveal-child">
               Time-tested favourites from our family fire to yours. All recipes serve 1 person using a ¼ potjie pot.
             </p>
           </div>
@@ -366,7 +366,7 @@ const Recipes = () => {
                     return (
                       <div
                         key={globalIndex}
-                        className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col group hover:border-primary/60 transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.1)] hover:-translate-y-1"
+                        className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col group hover:border-primary/60 transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.1)] hover:-translate-y-1 reveal-child"
                       >
                         <div className="h-52 overflow-hidden bg-secondary">
                           <img
@@ -382,14 +382,14 @@ const Recipes = () => {
                           <h3 className="font-heading text-xl text-primary mb-2">{recipe.title}</h3>
                           <div className="flex gap-4 text-foreground/40 text-xs font-body mb-3">
                             <span>⏱ {recipe.time}</span>
-                            <span>🍽 Serves {recipe.serves}</span>
+                            <span>Serves {recipe.serves}</span>
                           </div>
                           <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed italic">
                             {recipe.intro}
                           </p>
                           <button
                             onClick={() => setSelectedRecipe(globalIndex)}
-                            className="w-full px-6 py-3 border border-primary text-primary font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
+                            className="w-full px-6 py-3 border border-primary text-primary font-heading text-sm uppercase tracking-widest rounded btn-gold-glow hover:bg-primary hover:text-primary-foreground"
                           >
                             View Recipe
                           </button>

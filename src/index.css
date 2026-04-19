@@ -130,3 +130,22 @@
   content: '';
   @apply flex-1 h-px bg-primary/30;
 }
+
+/* Gold glow button effect — apply .btn-gold-glow to any button/link for effect */
+@layer components {
+  .btn-gold-glow {
+    @apply transition-all duration-300;
+  }
+  .btn-gold-glow:hover {
+    box-shadow: 0 0 30px rgba(201, 168, 76, 0.55), 0 0 8px rgba(201, 168, 76, 0.3);
+    transform: scale(1.025);
+  }
+}
+
+/* Scroll-reveal initial state so FOUC doesn't show un-animated content briefly */
+.scroll-reveal {
+  will-change: transform, opacity;
+}
+.reveal-child {
+  will-change: transform, opacity;
+}

@@ -62,17 +62,16 @@ const Shop = () => {
       <div ref={scrollRef}>
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-3xl text-center mb-16 scroll-reveal">
-            <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4">Our Collection</h1>
-            <p className="font-body text-foreground/70 text-lg">
+            <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4 reveal-child">Our Collection</h1>
+            <p className="font-body text-foreground/70 text-lg reveal-child">
               Handcrafted cast iron. Built to last generations.
             </p>
           </div>
 
-          {/* Hero product — The Potjielek-Lekker Set */}
           <div className="container mx-auto max-w-4xl mb-20 scroll-reveal">
-            <div className="bg-card border-2 border-primary/30 rounded overflow-hidden transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] hover:scale-[1.02]">
+            <div className="bg-card border-2 border-primary/30 rounded overflow-hidden transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)]">
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="overflow-hidden h-72 md:h-auto relative">
+                <div className="overflow-hidden h-72 md:h-auto relative reveal-child">
                   <img
                     src={heroProductImage}
                     alt="The Potjielek-Lekker Set"
@@ -83,7 +82,7 @@ const Shop = () => {
                   />
                   <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent pointer-events-none" />
                 </div>
-                <div className="p-8 md:p-10 flex flex-col justify-center">
+                <div className="p-8 md:p-10 flex flex-col justify-center reveal-child">
                   <h2 className="font-heading text-2xl md:text-3xl text-primary mb-2">
                     The Potjielek-Lekker Set
                   </h2>
@@ -100,7 +99,7 @@ const Shop = () => {
                   </ul>
                   <button
                     onClick={() => handleWhatsApp("The Potjielek-Lekker Set")}
-                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
+                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded btn-gold-glow flex items-center justify-center gap-3"
                   >
                     <WhatsAppIcon />
                     WhatsApp Us to Order
@@ -110,41 +109,41 @@ const Shop = () => {
             </div>
           </div>
 
-          {/* Video section */}
           <section className="bg-[#1C1C1C] py-16 px-6 -mx-6 mb-12 scroll-reveal">
             <div className="container mx-auto max-w-3xl text-center">
-              <h2 className="font-heading text-3xl md:text-4xl text-[#C9A84C] mb-3">
+              <h2 className="font-heading text-3xl md:text-4xl text-[#C9A84C] mb-3 reveal-child">
                 See How It Works
               </h2>
-              <p className="font-body text-[#F5EFE6] text-lg mb-8 italic">
+              <p className="font-body text-[#F5EFE6] text-lg mb-8 italic reveal-child">
                 Set up in seconds — anywhere, anytime.
               </p>
-              <video
-                src="https://res.cloudinary.com/dhrlznh1a/video/upload/v1776367719/flying_potjie_video_mpftzi.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full max-w-[800px] mx-auto border-2 border-[#C9A84C]"
-                style={{ borderRadius: "12px" }}
-              />
+              <div className="reveal-child">
+                <video
+                  src="https://res.cloudinary.com/dhrlznh1a/video/upload/v1776367719/flying_potjie_video_mpftzi.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full max-w-[800px] mx-auto border-2 border-[#C9A84C]"
+                  style={{ borderRadius: "12px" }}
+                />
+              </div>
             </div>
           </section>
 
           <SectionDivider text="Individual Items" />
 
-          {/* Individual item cards */}
           <div className="container mx-auto max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 scroll-reveal">
             {individualItems.map((item) => (
               <div
                 key={item.name}
-                className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] hover:scale-[1.03]"
+                className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)] reveal-child"
               >
                 <div className="overflow-hidden h-52">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     width={800}
                     height={800}
@@ -160,7 +159,7 @@ const Shop = () => {
                   )}
                   <button
                     onClick={() => handleWhatsApp(item.name)}
-                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.4)] hover:scale-[1.02] flex items-center justify-center gap-3"
+                    className="w-full px-6 py-4 bg-primary text-primary-foreground font-heading text-sm uppercase tracking-widest rounded btn-gold-glow flex items-center justify-center gap-3"
                   >
                     <WhatsAppIcon />
                     WhatsApp Us to Order
@@ -171,10 +170,10 @@ const Shop = () => {
           </div>
 
           <div className="container mx-auto max-w-3xl text-center mt-16 scroll-reveal space-y-2">
-            <p className="font-body text-[#F5EFE6] text-sm italic">
+            <p className="font-body text-[#F5EFE6] text-sm italic reveal-child">
               Nationwide delivery available via Pudo/courier at additional cost.
             </p>
-            <p className="font-body text-[#F5EFE6] text-sm italic">
+            <p className="font-body text-[#F5EFE6] text-sm italic reveal-child">
               Custom orders welcome —{" "}
               <a
                 href="https://wa.me/27824150386?text=Hi%20Potjielek-Lekker!%20I%27d%20like%20to%20enquire%20about%20a%20custom%20order."
