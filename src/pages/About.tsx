@@ -36,13 +36,16 @@ const About = () => {
           </div>
 
           <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 scroll-reveal">
-            <div className="overflow-hidden rounded reveal-child" style={{ backgroundColor: "#5C3317" }}>
-              <div
-                className="w-full h-full flex items-center justify-center"
+            <div className="overflow-hidden rounded reveal-child">
+              <img
+                src="/family_gathering_web.jpg"
+                alt="Family gathering around the table"
+                className="w-full h-full object-cover"
                 style={{ minHeight: "400px" }}
-              >
-                <span style={{ color: "#C9A84C" }} className="font-heading text-2xl">Image Coming Soon</span>
-              </div>
+                loading="lazy"
+                width={800}
+                height={600}
+              />
             </div>
             <div className="reveal-child">
               <p className="font-body text-foreground/80 leading-relaxed mb-6">
