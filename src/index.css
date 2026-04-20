@@ -149,3 +149,4 @@
 .reveal-child {
   will-change: transform, opacity;
 }
+.bolt-badge { display: none !important; }
