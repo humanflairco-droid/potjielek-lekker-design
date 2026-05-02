@@ -3,15 +3,16 @@ import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-import recipe1 from "@/assets/recipe-1-butternut-soup.jpg";
-import recipe2 from "@/assets/recipe-7-garlic-mushroom.png";
-import recipe3 from "@/assets/recipe-5-boerewors-bredie.jpg";
-import recipe4 from "@/assets/recipe-8-beef-vegetable.png";
-import recipe5 from "@/assets/recipe-3-chicken-sweet-potato.jpg";
-import recipe6 from "@/assets/recipe-2-lamb-karoo.jpg";
-import recipe7 from "@/assets/recipe-6-malva-pudding.jpg";
-import recipe8 from "@/assets/recipe-4-koeksister.jpg";
-import recipe9 from "@/assets/recipe-9-chocolate-lava.png";
+import recipePlaceholder from "@/assets/recipe-placeholder.svg";
+const recipe1 = recipePlaceholder;
+const recipe2 = recipePlaceholder;
+const recipe3 = recipePlaceholder;
+const recipe4 = recipePlaceholder;
+const recipe5 = recipePlaceholder;
+const recipe6 = recipePlaceholder;
+const recipe7 = recipePlaceholder;
+const recipe8 = recipePlaceholder;
+const recipe9 = recipePlaceholder;
 
 interface Recipe {
   title: string;
