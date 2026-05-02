@@ -2,6 +2,7 @@ import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import { Heart, Users, Flame } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import aboutPlaceholder from "@/assets/about-placeholder.svg";
 
 const pillars = [
   {
@@ -38,8 +39,8 @@ const About = () => {
           <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 scroll-reveal">
             <div className="overflow-hidden rounded reveal-child">
               <img
-                src="/family_gathering_web.jpg"
-                alt="Family gathering around the table"
+                src={aboutPlaceholder}
+                alt="Image coming soon"
                 className="w-full h-full object-cover"
                 style={{ minHeight: "400px" }}
                 loading="lazy"
