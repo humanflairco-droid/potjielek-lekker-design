@@ -32,7 +32,7 @@ const About = () => {
           <div className="container mx-auto max-w-3xl text-center mb-16 scroll-reveal">
             <h1 className="font-heading text-4xl md:text-5xl text-primary mb-4 reveal-child">Our Story</h1>
             <p className="font-body text-foreground/70 text-lg reveal-child">
-              A family-owned business on a mission to help families reclaim their time around the fire.
+              A family-owned business on a mission to help families reclaim their time together.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ const About = () => {
             </div>
             <div className="reveal-child">
               <p className="font-body text-foreground/80 leading-relaxed mb-6">
-                Potjielek-Lekker was born from a love of gathering. We saw how the simple act of cooking over fire could bring families closer — and we wanted to make that experience accessible to everyone.
+                Potjielek-Lekker was born from a love of gathering. We saw how the simple act of cooking , brings families closer — and we wanted to make that experience accessible to everyone.
               </p>
               <p className="font-body text-foreground/80 leading-relaxed mb-6">
                 Our custom-designed stands and premium pots bridge tradition and modern convenience, giving you the tools to create memories that last a lifetime.
