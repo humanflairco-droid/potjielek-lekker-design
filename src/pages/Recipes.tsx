@@ -290,7 +290,7 @@ const Recipes = () => {
                 <div className="h-64 md:h-80 overflow-hidden">
                   <img
                     src={recipe.image}
-                    alt={recipe.title}
+                    alt={`Placeholder image for ${recipe.title} — ${recipe.intro}`}
                     className="w-full h-full object-cover"
                     width={800}
                     height={600}
@@ -372,7 +372,7 @@ const Recipes = () => {
                         <div className="h-52 overflow-hidden bg-secondary">
                           <img
                             src={recipe.image}
-                            alt={recipe.title}
+                            alt={`Placeholder image for ${recipe.title} potjie recipe`}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             loading="lazy"
                             width={800}

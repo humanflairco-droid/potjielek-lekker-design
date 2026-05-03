@@ -40,7 +40,7 @@ const About = () => {
             <div className="overflow-hidden rounded reveal-child">
               <img
                 src={aboutPlaceholder}
-                alt="Image coming soon"
+                alt="Placeholder image for the Potjielek-Lekker family story — handcrafted cast iron potjie pots from Albertinia, Western Cape"
                 className="w-full h-full object-cover"
                 style={{ minHeight: "400px" }}
                 loading="lazy"

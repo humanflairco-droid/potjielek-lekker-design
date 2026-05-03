@@ -73,9 +73,9 @@ const Shop = () => {
             <div className="bg-card border-2 border-primary/30 rounded overflow-hidden transition-all duration-500 hover:border-[#C9A84C] hover:shadow-[0_0_25px_rgba(201,168,76,0.25)]">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="overflow-hidden h-72 md:h-auto relative reveal-child">
-                  <img
+                   <img
                     src={heroProductImage}
-                    alt="The Potjielek-Lekker Set"
+                    alt="The Potjielek-Lekker Set — quarter-size cast iron potjie pot with custom steel stand, gel cup and flame paddle"
                     className="w-full h-full object-cover"
                     loading="lazy"
                     width={800}
@@ -121,7 +121,7 @@ const Shop = () => {
               <div className="reveal-child">
                 <img
                   src={howItWorksImage}
-                  alt="Potjie pot and stand set up ready to use"
+                  alt="Cast iron potjie pot resting on a handcrafted steel Potjielek-Lekker stand, set up and ready to cook"
                   loading="lazy"
                   className="w-full max-w-[800px] mx-auto border-2 border-[#C9A84C]"
                   style={{ borderRadius: "12px" }}
@@ -141,7 +141,7 @@ const Shop = () => {
                 <div className="overflow-hidden h-52">
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} — ${item.desc}`}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     width={800}
