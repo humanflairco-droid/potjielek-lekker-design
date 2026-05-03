@@ -4,6 +4,7 @@ import productImage from "@/assets/product-stand-detail.jpg";
 import heroProductImage from "@/assets/potjielek-shop-card.png";
 import shopPotOnly from "@/assets/shop-pot-only.jpg";
 import shopGelCup from "@/assets/shop-gel-cup.jpg";
+import howItWorksImage from "@/assets/potjie-stand-howitworks.jpg";
 import { Check } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -118,12 +119,10 @@ const Shop = () => {
                 Set up in seconds — anywhere, anytime.
               </p>
               <div className="reveal-child">
-                <video
-                  src="https://res.cloudinary.com/dhrlznh1a/video/upload/v1776367719/flying_potjie_video_mpftzi.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+                <img
+                  src={howItWorksImage}
+                  alt="Potjie pot and stand set up ready to use"
+                  loading="lazy"
                   className="w-full max-w-[800px] mx-auto border-2 border-[#C9A84C]"
                   style={{ borderRadius: "12px" }}
                 />
