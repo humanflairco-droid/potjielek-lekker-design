@@ -186,7 +186,7 @@ const Home = () => {
         <section className="py-16 px-6 bg-iron/30 scroll-reveal">
           <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="overflow-hidden rounded reveal-child">
-              <img src={productImage} alt="Cast iron potjie pot on custom stand" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={800} />
+              <img src={productImage} alt="Handcrafted cast iron potjie pot on custom welded steel stand by Potjielek-Lekker" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={800} height={800} />
             </div>
             <div className="reveal-child">
               <h2 className="font-heading text-3xl text-primary mb-6">Crafted With Purpose</h2>
@@ -214,7 +214,7 @@ const Home = () => {
               </Link>
             </div>
             <div className="order-1 md:order-2 overflow-hidden rounded reveal-child">
-              <img src={familyImage} alt="Family gathered around a potjie" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={1200} height={800} />
+              <img src={familyImage} alt="Family gathered at a table sharing a meal cooked in a Potjielek-Lekker cast iron potjie pot" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width={1200} height={800} />
             </div>
           </div>
         </section>
@@ -228,8 +228,8 @@ const Home = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { src: hero01, alt: "Family gathered around potjie dinner" },
-                { src: hero02, alt: "Friends enjoying a potjie evening together" },
+                { src: hero01, alt: "Family gathered around a Potjielek-Lekker cast iron potjie pot enjoying dinner together" },
+                { src: hero02, alt: "Friends sharing a slow-cooked potjie meal around the fire on a Potjielek-Lekker stand" },
               ].map((img) => (
                 <div key={img.alt} className="overflow-hidden rounded aspect-[4/3] reveal-child">
                   <img
