@@ -367,34 +367,12 @@ const Recipes = () => {
                     return (
                       <div
                         key={globalIndex}
-                        className="bg-card border border-primary/20 rounded overflow-hidden flex flex-col group hover:border-primary/60 transition-all duration-300 hover:shadow-[0_0_30px_hsl(43,52%,54%,0.1)] hover:-translate-y-1 reveal-child"
+                        className="border border-primary/20 rounded overflow-hidden flex items-center justify-center reveal-child h-80"
+                        style={{ backgroundColor: "#3A2A1F" }}
                       >
-                        <div className="h-52 overflow-hidden bg-secondary">
-                          <img
-                            src={recipe.image}
-                            alt={`Placeholder image for ${recipe.title} potjie recipe`}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            loading="lazy"
-                            width={800}
-                            height={600}
-                          />
-                        </div>
-                        <div className="p-6 flex flex-col flex-1">
-                          <h3 className="font-heading text-xl text-primary mb-2">{recipe.title}</h3>
-                          <div className="flex gap-4 text-foreground/40 text-xs font-body mb-3">
-                            <span>⏱ {recipe.time}</span>
-                            <span>Serves {recipe.serves}</span>
-                          </div>
-                          <p className="font-body text-foreground/60 text-sm mb-6 flex-1 leading-relaxed italic">
-                            {recipe.intro}
-                          </p>
-                          <button
-                            onClick={() => setSelectedRecipe(globalIndex)}
-                            className="w-full px-6 py-3 border border-primary text-primary font-heading text-sm uppercase tracking-widest rounded btn-gold-glow hover:bg-primary hover:text-primary-foreground"
-                          >
-                            View Recipe
-                          </button>
-                        </div>
+                        <span className="font-heading text-lg uppercase tracking-widest" style={{ color: "#C9A84C" }}>
+                          Coming Soon
+                        </span>
                       </div>
                     );
                   })}
