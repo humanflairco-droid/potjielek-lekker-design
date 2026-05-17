@@ -3,7 +3,6 @@ import SectionDivider from "@/components/SectionDivider";
 import { Heart, Users, Flame } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import aboutProduct1 from "@/assets/about-product-1.jpg";
-import aboutProduct2 from "@/assets/about-product-2.jpg";
 
 const pillars = [
   {
@@ -38,18 +37,12 @@ const About = () => {
           </div>
 
           <div className="container mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 scroll-reveal">
-            <div className="grid grid-cols-2 gap-4 reveal-child">
+            <div className="reveal-child">
               <img
                 src={aboutProduct1}
-                alt="Two 1/4 potjie pots with stands set on a dining table alongside a spice rack and refreshments"
+                alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
                 loading="lazy"
-                className="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
-              />
-              <img
-                src={aboutProduct2}
-                alt="Close-up of a 1/4 potjie pot on its stand being lit, ready for cooking"
-                loading="lazy"
-                className="w-full h-64 md:h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+                className="w-full h-80 md:h-96 object-cover rounded-xl shadow-lg"
               />
             </div>
             <div className="reveal-child">
