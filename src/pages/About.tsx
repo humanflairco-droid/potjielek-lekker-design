@@ -49,7 +49,7 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="w-full mb-20 scroll-reveal reveal-child p-0 m-0">
+          <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mb-20 scroll-reveal reveal-child p-0">
             <img
               src={aboutProduct1}
               alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
