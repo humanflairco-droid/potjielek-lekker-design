@@ -54,7 +54,7 @@ const About = () => {
               src={aboutProduct1}
               alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
               loading="lazy"
-              className="w-full h-96 object-contain object-center rounded-none"
+              className="w-full h-[500px] object-cover object-center rounded-none"
             />
           </div>
 
