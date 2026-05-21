@@ -48,7 +48,7 @@ const About = () => {
                 Every pot is proudly handcrafted in Albertinia, a small town in the heart of the Western Cape — where quality and tradition go hand in hand.
               </p>
             </div>
-            <div className="w-full h-96 overflow-hidden reveal-child">
+            <div className="w-full h-[500px] overflow-hidden reveal-child">
               <img
                 src={aboutProduct1}
                 alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
