@@ -37,26 +37,24 @@ const About = () => {
           </div>
 
           <div className="mb-20 scroll-reveal">
-            <div className="flex items-center gap-0">
-              <div className="w-1/2 h-96 overflow-hidden reveal-child">
-                <img
-                  src={aboutProduct1}
-                  alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
-                  loading="lazy"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="w-1/2 p-12 reveal-child">
-                <p className="font-body text-foreground/80 leading-relaxed mb-6">
-                  Potjielek-Lekker was born from a love of gathering. We saw how the simple act of cooking brings families closer — and we wanted to make that experience accessible to everyone.
-                </p>
-                <p className="font-body text-foreground/80 leading-relaxed mb-6">
-                  Our custom-designed stands and premium pots bridge tradition and modern convenience, giving you the tools to create memories that last a lifetime.
-                </p>
-                <p className="font-body text-foreground/80 leading-relaxed italic">
-                  Every pot is proudly handcrafted in Albertinia, a small town in the heart of the Western Cape — where quality and tradition go hand in hand.
-                </p>
-              </div>
+            <div className="container mx-auto max-w-3xl text-center reveal-child mb-10">
+              <p className="font-body text-foreground/80 leading-relaxed mb-6">
+                Potjielek-Lekker was born from a love of gathering. We saw how the simple act of cooking brings families closer — and we wanted to make that experience accessible to everyone.
+              </p>
+              <p className="font-body text-foreground/80 leading-relaxed mb-6">
+                Our custom-designed stands and premium pots bridge tradition and modern convenience, giving you the tools to create memories that last a lifetime.
+              </p>
+              <p className="font-body text-foreground/80 leading-relaxed italic">
+                Every pot is proudly handcrafted in Albertinia, a small town in the heart of the Western Cape — where quality and tradition go hand in hand.
+              </p>
+            </div>
+            <div className="w-full h-96 overflow-hidden reveal-child">
+              <img
+                src={aboutProduct1}
+                alt="Festive dining table set with multiple 1/4 potjie pots, wine, and Christmas decorations"
+                loading="lazy"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
           </div>
 
