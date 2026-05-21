@@ -2,7 +2,7 @@ import PageWrapper from "@/components/PageWrapper";
 import SectionDivider from "@/components/SectionDivider";
 import { Heart, Users, Flame } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import aboutProduct1 from "/potjielek_about_enhanced.jpg";
+const aboutProduct1 = "/potjielek_about_enhanced.jpg";
 
 const pillars = [
   {
