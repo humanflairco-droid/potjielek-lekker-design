@@ -52,6 +52,12 @@ const Footer = () => (
       </div>
       <div className="border-t border-primary/15 pt-6 text-center">
         <p className="text-foreground/40 text-xs">&copy; {new Date().getFullYear()} Potjielek-Lekker. All rights reserved.</p>
+        <p className="mt-2 text-foreground/35 text-[10px]">
+          Website by{" "}
+          <a href="https://humanflairco.co.za/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            HumanFlairCo
+          </a>
+        </p>
       </div>
     </div>
   </footer>
